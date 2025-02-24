@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pañol NCM Servicios</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body class="container-fluid text-center custom">
+    <div class="row">
+        <button id="btn-open" class="btn d-lg-none col-1">
+            Menú
+        </button>
+    </div>
+    <div class="row row--cabecera mb-3">
+        <header class="grid-item1 container col-3 col-lg-2 col-xl-2">
+            <img class="logo img-fluid" src="../assets/logo-ncm.png" alt="logo-ncm" width="150px" height="100px">
+        </header>
+        <section class="grid-item2 container col-8 col-lg-10 col-xl-10">
+            <div class="user oculto">Usuario: </div>
+            <h1>TALLER NCM</h1>
+        </section>
+    </div>
+    <div class="row row--cuerpo mb-4">
+        <nav class="navbar navbar-expand-lg col-2 col-lg-2 col-xl-2 sidebar grid-item3" id="sidebar">
+            <nav>
+                <div class="d-flex justify-content-end">
+                    <button id="btn-close" class="btn d-lg-none">
+                        X
+                    </button>
+                </div>
+                <h2 class="mb-3"><a href="../index.html">Area de Trabajo</a></h2>
+                <ul>
+                    <li><a href="gestion.html">Gestión</a></li>
+                    <li><a href="herramientas.html">Herramientas</a></li>
+                    <li><a href="ubicacion.html">Ubicacion</a></li>
+                    <li><a href="insumos.html">Insumos</a></li>
+                    <li><a href="datos.html">Datos</a></li>
+                </ul>
+            </nav>
+        </nav>
+        <main class="grid-item4 col-12 col-lg-10 col-xl-10">
+            <h2>Datos Personal</h2> 
+            <ul>
+                <li>NOMBRE: <input type="text" name="Nombre" placeholder="Introduzca su nombre"></li>
+                <li>APELLIDO: <input type="text" name="Nombre" placeholder="Introduzca su apellido"></li>
+                <li>CARGO: <input type="text" name="Nombre" placeholder="Introduzca su cargo"></li>
+                <li>DNI: <input type="text" name="Nombre" placeholder="Introduzca su DNI"></li>
+            </ul>
+        </section>         
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script>
+        const btnOpen = document.getElementById('btn-open');
+        const btnClose = document.getElementById('btn-close');
+        const sidebar = document.getElementById('sidebar');
+        btnOpen.addEventListener('click', () => {
+            sidebar.classList.add('show');
+        });
+        btnClose.addEventListener('click', () => {
+            sidebar.classList.remove('show');
+        });
+    </script>
+</body>
+</html>
