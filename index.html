@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pañol NCM Servicios</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body class="container-fluid text-center custom">
@@ -14,36 +15,57 @@
         </button>
     </div>
     <div class="row row--cabecera mb-3">
-        <header class="grid-item1 container col-3 col-lg-2 col-xl-2">
-            <img class="logo img-fluid" src="assets/logo-ncm.png" alt="logo-ncm" width="150px" height="100px">
+        <header class="grid-item1 container col-3 col-lg-2 col-xl-2" id="sidebar">
+            <div>
+                <img class="logo img-fluid" src="assets/logo-ncm.png" alt="logo-ncm" width="150px" height="100px">
+            </div>
         </header>
         <section class="grid-item2 container col-8 col-lg-10 col-xl-10">
-            <div class="user oculto">Usuario: </div>
-            <h1>TALLER NCM</h1>
+            <div class="row">
+                <div class="col-lg-1 col-xl-1">
+                    <i class="bi bi-arrows-expand-vertical" id="btn-toggle">
+                        <i class="btn btn-outline-secondary"></i>
+                    </i>
+                </div>
+                <div class="user col-6 col-md-6 col-lg-9 col-xl-9 justify-content-start">
+                    <i class="bi bi-person-circle"></i><p>Usuario: </p>
+                </div>
+                <div class="col-lg-1 dropdown justify-content-end pt-2">
+                    <i class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="bi bi-bell"></i>
+                      </i>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">INCIDENCIAS NUEVAS</a></li>
+                        <li><a class="dropdown-item" href="#">PEDIDOS NUEVOS</a></li>
+                        <li><a class="dropdown-item" href="#">REPARACIONES A RETIRAR</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-1"><a href="inicio.html" class="btn btn-danger" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="custom-tooltip" data-bs-title="Cerrar Sesión">Salir</a></div>
+                <h1>TALLER NCM</h1>
+            </div>
         </section>
     </div>
     <div class="row row--cuerpo mb-4">
-        <nav class="navbar navbar-expand-lg col-2 col-lg-2 col-xl-2 sidebar grid-item3" id="sidebar">
+        <nav class="navbar navbar-expand-lg col-2 col-lg-2 col-xl-2 sidebar grid-item3" id="sidebar1">
             <nav>
                 <div class="d-flex justify-content-end">
                     <button id="btn-close" class="btn d-lg-none">
                         X
                     </button>
                 </div>
-                <h2 class="mb-3"><a href="index.html">Area de Trabajo</a></h2>
                 <ul>
-                    <li><a href="screens/gestion.html">Gestión</a></li>
-                    <li><a href="screens/herramientas.html">Herramientas</a></li>
-                    <li><a href="screens/ubicacion.html">Ubicacion</a></li>
-                    <li><a href="screens/insumos.html">Insumos</a></li>
-                    <li><a href="screens/datos.html">Datos</a></li>
+                    <li class=""><a href="screens/gestion.html"><img class="img-li " src="assets/gestion-png.png" alt="gestion-png">Gestión</a></li>
+                    <li class=""><a href="screens/herramientas.html"><img class="img-li " src="assets/herramientas-png.png" alt="herramientas-png">Herramientas</a></li>
+                    <li class=""><a href="screens/ubicacion.html"><img class="img-li " src="assets/ubicacion-png.png" alt="ubicacion-png">Ubicacion</a></li>
+                    <li class=""><a href="screens/insumos.html"><img class="img-li " src="assets/insumos-png.png" alt="insumos-png">Insumos</a></li>
+                    <li class=""><a href="screens/datos.html"><img class="img-li " src="assets/usuario-png.png" alt="usuario-png">Datos</a></li>
                 </ul>
             </nav>
         </nav>
         <main class="grid-item4 col-12 col-lg-10 col-xl-10"> <!-- main va a estar dentro de todas las pantallas, la idea es que sean todas pantallas que tengan solamente un unico espacio de funcionalidad--> 
             <h2 class="mb-4">Bienvenido a Taller</h2>
             <div class="container">
-                <div class="row mb-3">
+                <div class="row mb-4">
                     <div class="text-center col-4 col-sm-4 col-md-4 col-lg-4">
                         <a href="screens/herramientas.html"><img src="assets/herramientas-png.png" class="rounded accesos" alt="herramientas">
                         </a>
@@ -58,9 +80,9 @@
                     </div>
                 </div>
                 <div class="row">
-                    <a href="screens/ubicacion.html"><div class="text-center col-6 col-sm-6 col-md-6 col-lg-6">
-                        <img src="assets/ubicacion-png.png" class="rounded accesos" alt="ubicacion">
-                    </a>
+                    <div class="text-center col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                        <a href="screens/ubicacion.html"><img src="assets/ubicacion-png.png" class="rounded accesos" alt="ubicacion">
+                        </a>
                     </div>
                     <div class="text-center col-6 col-sm-6 col-md-6 col-lg-6">
                         <a href="screens/datos.html"><img src="assets/usuario-png.png" class="rounded accesos" alt="usuario">
@@ -103,7 +125,7 @@
                     <article>
                         <table class="table tabla-herramientas">
                             <tr>
-                                <th colspan="3">INC-0016</td>
+                                <th colspan="3">INC-0016</th>
                             </tr>
                             <tr>
                               <th>ID</th>
@@ -153,15 +175,40 @@
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script>
+        const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+        const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
         const btnOpen = document.getElementById('btn-open');
         const btnClose = document.getElementById('btn-close');
         const sidebar = document.getElementById('sidebar');
+        const sidebar1 = document.getElementById('sidebar1');
+        const gridItem2 = document.querySelector('.grid-item2');
+        const gridItem4 = document.querySelector('.grid-item4');
+
         btnOpen.addEventListener('click', () => {
             sidebar.classList.add('show');
         });
         btnClose.addEventListener('click', () => {
             sidebar.classList.remove('show');
         });
+        const btnToggle = document.getElementById('btn-toggle');
+
+        btnToggle.addEventListener('click', () => {
+        sidebar.classList.toggle('show');
+        sidebar1.classList.toggle('show');
+        
+        if (!sidebar.classList.contains('show')) {
+            gridItem2.classList.remove('col-xl-10');
+            gridItem2.classList.add('col-xl-12');
+            gridItem4.classList.remove('col-xl-10');
+            gridItem4.classList.add('col-xl-12');
+        } else {
+    
+            gridItem2.classList.remove('col-xl-12');
+            gridItem2.classList.add('col-xl-10');
+            gridItem4.classList.remove('col-xl-12');
+            gridItem4.classList.add('col-xl-10');
+        }       
+    });
     </script>
 </body>
 </html>
