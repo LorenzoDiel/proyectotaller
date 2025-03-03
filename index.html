@@ -9,60 +9,56 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body class="container-fluid text-center custom">
-    <div class="row">
-        <button id="btn-open" class="btn d-lg-none col-1">
-            Menú
-        </button>
-    </div>
     <div class="row row--cabecera mb-3">
-        <header class="grid-item1 container col-3 col-lg-2 col-xl-2" id="sidebar">
-            <div>
-                <img class="logo img-fluid" src="assets/logo-ncm.png" alt="logo-ncm" width="150px" height="100px">
+        <header class="container">
+            <div class="row">
+                    <div class="col-1 col-md-1 col-lg-1 col-xl-1">
+                        <i class="btn btn-primary" data-bs-toggle="offcanvas" href="#offcanvasNav" role="button" aria-controls="offcanvasNav">
+                        Menu</i>
+                    </div>
+                    <div class="user col-7 col-md-7 col-lg-9 col-xl-9 justify-content-start">
+                        <i class="bi bi-person-circle me-1"></i><p>Usuario: </p>
+                    </div>
+                    <div class="col-2 col-md-2 col-lg-1 col-xl-1 dropdown justify-content-end pt-2">
+                        <i class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="bi bi-bell"></i>
+                        </i>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">INCIDENCIAS NUEVAS</a></li>
+                            <li><a class="dropdown-item" href="#">PEDIDOS NUEVOS</a></li>
+                            <li><a class="dropdown-item" href="#">REPARACIONES A RETIRAR</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-2 col-md-2 col-lg-1 col-xl-1"><a href="inicio.html" class="btn btn-danger" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="custom-tooltip" data-bs-title="Cerrar Sesión">Salir</a></div>
+                <div class="row">
+                    <h1>TALLER NCM</h1>
+                </div>
             </div>
         </header>
-        <section class="grid-item2 container col-8 col-lg-10 col-xl-10">
-            <div class="row">
-                <div class="col-lg-1 col-xl-1">
-                    <i class="bi bi-arrows-expand-vertical" id="btn-toggle">
-                        <i class="btn btn-outline-secondary"></i>
-                    </i>
-                </div>
-                <div class="user col-6 col-md-6 col-lg-9 col-xl-9 justify-content-start">
-                    <i class="bi bi-person-circle"></i><p>Usuario: </p>
-                </div>
-                <div class="col-lg-1 dropdown justify-content-end pt-2">
-                    <i class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                        <i class="bi bi-bell"></i>
-                      </i>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">INCIDENCIAS NUEVAS</a></li>
-                        <li><a class="dropdown-item" href="#">PEDIDOS NUEVOS</a></li>
-                        <li><a class="dropdown-item" href="#">REPARACIONES A RETIRAR</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-1"><a href="inicio.html" class="btn btn-danger" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="custom-tooltip" data-bs-title="Cerrar Sesión">Salir</a></div>
-                <h1>TALLER NCM</h1>
+    </div>
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNav" aria-labelledby="offcanvasNavLabel">
+        <div class="offcanvas-header">
+            <div class="d-flex justify-content-center flex-row-reverse">
+                <h2 class="offcanvas-title" id="offcanvasNavLabel">Area de trabajo</h2>
             </div>
-        </section>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div>
+                <nav>
+                    <ul>
+                        <li class=""><a href="screens/gestion.html"><img class="img-li " src="assets/gestion-png.png" alt="gestion-png">Gestión</a></li>
+                        <li class=""><a href="screens/herramientas.html"><img class="img-li " src="assets/herramientas-png.png" alt="herramientas-png">Herramientas</a></li>
+                        <li class=""><a href="screens/ubicacion.html"><img class="img-li " src="assets/ubicacion-png.png" alt="ubicacion-png">Ubicacion</a></li>
+                        <li class=""><a href="screens/insumos.html"><img class="img-li " src="assets/insumos-png.png" alt="insumos-png">Insumos</a></li>
+                        <li class=""><a href="screens/datos.html"><img class="img-li " src="assets/usuario-png.png" alt="usuario-png">Datos</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
     </div>
     <div class="row row--cuerpo mb-4">
-        <nav class="navbar navbar-expand-lg col-2 col-lg-2 col-xl-2 sidebar grid-item3" id="sidebar1">
-            <nav>
-                <div class="d-flex justify-content-end">
-                    <button id="btn-close" class="btn d-lg-none">
-                        X
-                    </button>
-                </div>
-                <ul>
-                    <li class=""><a href="screens/gestion.html"><img class="img-li " src="assets/gestion-png.png" alt="gestion-png">Gestión</a></li>
-                    <li class=""><a href="screens/herramientas.html"><img class="img-li " src="assets/herramientas-png.png" alt="herramientas-png">Herramientas</a></li>
-                    <li class=""><a href="screens/ubicacion.html"><img class="img-li " src="assets/ubicacion-png.png" alt="ubicacion-png">Ubicacion</a></li>
-                    <li class=""><a href="screens/insumos.html"><img class="img-li " src="assets/insumos-png.png" alt="insumos-png">Insumos</a></li>
-                    <li class=""><a href="screens/datos.html"><img class="img-li " src="assets/usuario-png.png" alt="usuario-png">Datos</a></li>
-                </ul>
-            </nav>
-        </nav>
-        <main class="grid-item4 col-12 col-lg-10 col-xl-10"> <!-- main va a estar dentro de todas las pantallas, la idea es que sean todas pantallas que tengan solamente un unico espacio de funcionalidad--> 
+        <main class="grid-item4 col-12 col-lg-12 col-xl-12"> <!-- main va a estar dentro de todas las pantallas, la idea es que sean todas pantallas que tengan solamente un unico espacio de funcionalidad--> 
             <h2 class="mb-4">Bienvenido a Taller</h2>
             <div class="container">
                 <div class="row mb-4">
@@ -177,38 +173,6 @@
     <script>
         const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
         const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
-        const btnOpen = document.getElementById('btn-open');
-        const btnClose = document.getElementById('btn-close');
-        const sidebar = document.getElementById('sidebar');
-        const sidebar1 = document.getElementById('sidebar1');
-        const gridItem2 = document.querySelector('.grid-item2');
-        const gridItem4 = document.querySelector('.grid-item4');
-
-        btnOpen.addEventListener('click', () => {
-            sidebar.classList.add('show');
-        });
-        btnClose.addEventListener('click', () => {
-            sidebar.classList.remove('show');
-        });
-        const btnToggle = document.getElementById('btn-toggle');
-
-        btnToggle.addEventListener('click', () => {
-        sidebar.classList.toggle('show');
-        sidebar1.classList.toggle('show');
-        
-        if (!sidebar.classList.contains('show')) {
-            gridItem2.classList.remove('col-xl-10');
-            gridItem2.classList.add('col-xl-12');
-            gridItem4.classList.remove('col-xl-10');
-            gridItem4.classList.add('col-xl-12');
-        } else {
-    
-            gridItem2.classList.remove('col-xl-12');
-            gridItem2.classList.add('col-xl-10');
-            gridItem4.classList.remove('col-xl-12');
-            gridItem4.classList.add('col-xl-10');
-        }       
-    });
     </script>
 </body>
 </html>
